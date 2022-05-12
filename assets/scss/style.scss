@@ -1,0 +1,117 @@
+@import "_variables";
+@import "_banner";
+@import "_tarjeta";
+@import "_botonContacto";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*Index*/    
+.grid-container{
+    width: 100%;
+    display: grid;
+    gap:5px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "footer footer";
+}
+
+.encabezado{
+    grid-area: header;
+    width: 100%;
+    nav{
+        position: sticky;
+        top: 0;
+    }
+}
+
+.logo img{
+    height: 150px;
+    width: 150px;
+}
+
+
+.principalI{
+    grid-area: main;
+    display: flex;
+    flex-flow: column nowrap;
+    
+}
+
+
+
+.btn{
+    text-align: center;
+    margin-top: 5px;
+    margin: 5px 5px;
+    border: none;
+    background-color: #6D85a3;
+    a{
+        text-decoration: none;
+        color: white;
+        
+    }
+}
+
+
+@media screen and (min-width:1024px){
+    .btn:hover{
+        background-color: #8ba7c8 ;
+    }
+}
+
+footer{
+    grid-area: footer;
+    width: 100%;
+    /*padding: 0.5rem;*/
+    background-color: #6D85a3;
+    color:white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+footer div a{
+    color: white;
+    padding: 5px;
+}
+
+/*Pagina Productos*/
+.galeria{
+    display: flex;
+    flex-flow: column nowrap;
+}
+.productos{
+    margin: 5px;
+    
+}
+
+@media screen and (min-width:1024px){
+    .galeria{
+        flex-flow: row wrap;
+        align-content: space-around;
+        justify-content: space-evenly;
+
+    }
+    .productos{
+        width: 250px;
+        box-shadow: 11px 10px 16px 0px rgba(101,101,101,0.66);
+        transition: transform 0.1s;
+    }
+    .productos:hover{
+        transform: scale(1.5,1.5);
+    }
+    .productos:active{
+        box-shadow: 11px 10px 19px -10px rgba(101,101,101,0.66);
+    }
+}
+
+
+

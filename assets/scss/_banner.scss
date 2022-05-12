@@ -1,0 +1,16 @@
+.banner{
+    width: map-get($pancarta,ancho );
+    background-image: url(../img/bannercafeteria.jpg);
+    height: map-get($pancarta, altura );
+    background-position: map-get($pancarta, bg-posicion );
+    background-size: map-get($pancarta, bg-tamaño );
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-attachment: fixed;
+     h1{
+        font-size: 3rem;
+        color: white;
+    }
+}

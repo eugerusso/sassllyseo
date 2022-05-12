@@ -1,0 +1,21 @@
+.tarjeta{
+    background-color: $fondotarjeta;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    border: 1.5px solid #6D85a3; 
+    div{
+        display: flex;
+        flex-direction: column;
+    }  
+    h3{
+        text-align: center;
+    }
+    img{
+        height: 150px;
+        padding: 5px;
+        justify-self: center;
+        align-self: center;
+       
+    }
+}
+
